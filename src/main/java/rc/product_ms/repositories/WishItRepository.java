@@ -4,5 +4,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface WishItRepository extends MongoRepository<WishIt, User>{
-    List<Product> findByUser(org.apache.catalina.User user);
+    List<Product> findByUser(User user);
 }

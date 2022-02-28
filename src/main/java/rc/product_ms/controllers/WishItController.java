@@ -3,10 +3,7 @@ package rc.product_ms.controllers;
 import rc.product_ms.models.*;
 import rc.product_ms.repositories.UserRepository;
 import rc.product_ms.repositories.WishItRepository;
-
 import java.util.List;
-
-import org.apache.catalina.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

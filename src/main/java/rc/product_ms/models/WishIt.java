@@ -1,16 +1,16 @@
 package rc.product_ms.models;
 
 public class WishIt {
-    private Integer idUser;
+    private User user;
     private Integer idProduct;
     
-    public WishIt(Integer idUser, Integer idProduct){
-        this.idUser=idUser;
+    public WishIt(User user, Integer idProduct){
+        this.user=user;
         this.idProduct=idProduct;
     }
 
-    public Integer getIduser(){
-        return this.idUser;
+    public User getuser(){
+        return this.user;
     }
 
     public Integer getIdProduct(){
