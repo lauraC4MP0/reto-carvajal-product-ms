@@ -6,6 +6,7 @@ public class Product {
     private Integer stock;
 
     public Product(String name, Integer price, Integer stock){
+        this.name=name;
         this.price=price;
         this.stock=stock;
     }
@@ -24,5 +25,13 @@ public class Product {
 
     public void setStock(Integer stock){
         this.stock=stock;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setPrice(Integer price){
+        this.price=price;
     }
 }

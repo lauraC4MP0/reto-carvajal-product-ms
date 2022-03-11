@@ -20,7 +20,11 @@ public class ProductController {
 
     @PostMapping("/products")
     Product newProduct(@RequestBody Product product){
-        return productRepository.save(product);
+        Product p=product;
+        p.setName(product.getName());
+        p.setPrice(product.getPrice());
+        p.setStock(product.getStock());
+        return productRepository.save(p);
     }
 
     @PutMapping("product/update/{name}")

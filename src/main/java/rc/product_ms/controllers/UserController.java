@@ -11,7 +11,7 @@ public class UserController {
         this.userRepository=userRepository;
     }
 
-    @GetMapping("/getUsers")
+    @GetMapping("/getUsers/{id}")
     User getUser(@PathVariable Integer id){
         User user=userRepository.findBy(id);
         return user;
