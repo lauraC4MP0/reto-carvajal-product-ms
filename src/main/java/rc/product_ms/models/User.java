@@ -1,4 +1,5 @@
 package rc.product_ms.models;
+import java.util.List;
 import org.springframework.data.annotation.Id;
 
 public class User {
@@ -8,6 +9,7 @@ public class User {
     private String email;
     private String phoneNumber;
     private String password;
+    private List<Product> wishIt;
 
     public User(Integer id, String name,String email,String phoneNumber,String password){
         this.id=id;
@@ -35,6 +37,14 @@ public class User {
 
     public String getPassword(){
         return password;
+    }
+
+    public List<Product> getWishIt(){
+        return wishIt;
+    }
+
+    public void setWishIt(List<Product> wishIt){
+        this.wishIt=wishIt;
     }
 
 }
