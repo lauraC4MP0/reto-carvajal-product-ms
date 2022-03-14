@@ -16,25 +16,20 @@ public class UserController {
         this.productRepository=productRepository;
     }
 
-    @GetMapping("/getUsers/{id}")
-    User getUser(@PathVariable Integer id){
-        try{
-        System.out.println(id+"");
-        System.out.println(userRepository.findBy(id));
-        //System.out.println(user.toString());
-        return null;
-        }catch(UserNotFoundException e){
-            e.getMessage();
-            throw new UserNotFoundException("No existe ningún usuario con el id "+id);
-        }
+    @GetMapping("/user/getUser/{userId}")
+    User getUser(@PathVariable Integer userId){
+        System.out.println(userId);
+        User user=userRepository.findBy(userId);
+        System.out.println(user);
+        return user;
     }
 
-    @PostMapping("/users")
+    @PostMapping("/user")
     User newUser(@RequestBody User user){
         return userRepository.save(user);
     }
 
-    @PutMapping("/users/update/{userId}")
+    @PutMapping("/user/update/{userId}")
     User updateUser(@RequestAttribute Integer userId, String productName){
         try{
             User user=userRepository.findBy(userId);
