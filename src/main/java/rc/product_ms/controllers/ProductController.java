@@ -11,14 +11,14 @@ public class ProductController {
         this.productRepository=productRepository;
     }
     
-    @GetMapping("/products/{name}")
+    @GetMapping("/product/{name}")
     Product getProduct(@PathVariable String name){
         Product product=productRepository.findByName(name);
         //.orElseThrow(()->new ProductNoLongerAvailableAdvice());
         return product;
     }
 
-    @PostMapping("/products")
+    @PostMapping("/product")
     Product newProduct(@RequestBody Product product){
         return productRepository.save(product);
     }
